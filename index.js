@@ -1,4 +1,3 @@
-
 /**
  * Thay background sau khi ảnh load xong
  * @param {String} selector - CSS selector
@@ -64,7 +63,7 @@ list.forEach((item) => {
 // Lưu form vào GG sheet
 
 const GOOGLE_SCRIPT_URL_THAM_DU =
-  "https://script.google.com/macros/s/AKfycbx8Mx6HpguklnG7meKPek5xyoEt45DR2HMBffzRCI7yn_-VPbbRUnAtcgBgjbvurhZ_/exec";
+  "https://script.google.com/macros/s/AKfycbz2XxAGQdvHPmRvpKXnu8RSNcZrH4NwHfxOzazZFLvqcKHi9tx6mob_HysyQgh0tCas/exec";
 
 const closeIds = ["w-ysykddk8"];
 const formIds = ["3jnfqzjo"];
@@ -83,7 +82,7 @@ formIds.forEach(function (id, index) {
       name: "'" + form.full_name.value,
       relationship: "'" + form.text_input_1.value,
       message: "'" + form.text_input_2.value,
-      isInvite: selected.join(", ")
+      isInvite: selected.join(", "),
     };
     fetch(GOOGLE_SCRIPT_URL_THAM_DU, {
       method: "POST",
@@ -133,7 +132,7 @@ formIds.forEach(function (id, index) {
 </style> */
 }
 
-const sheetID = "1nfSLogrTp2Vp1s2uiMZeF8g30d8fUDjIAvGdms220U0";
+const sheetID = "1uaIXSJz_C1YB5NvgR7GoGzr4AzeSRyvSzhLChzabq2I";
 const url = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?tqx=out:json`;
 
 let messages = []; // Chuyển sang `let`
